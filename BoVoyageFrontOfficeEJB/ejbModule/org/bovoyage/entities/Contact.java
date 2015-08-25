@@ -1,5 +1,6 @@
 package org.bovoyage.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ import javax.persistence.OneToOne;
 	@NamedQuery(name="Contact.getAllContact", query="SELECT c FROM Contact c"),
 	@NamedQuery(name="Contact.getContactByNom", query="SELECT c FROM Contact c WHERE c.nom LIKE :nom")
 })
-public class Contact {
+public class Contact implements Serializable{
 
 	@Id
 	@Column(name="kp_contact")

@@ -1,6 +1,7 @@
 package org.bovoyage.entities;
 
-import java.sql.Date;
+import java.util.Date;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +15,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class DateVoyage {
+public class DateVoyage implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="kp_datevoyage")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -30,6 +35,16 @@ public class DateVoyage {
 	public DateVoyage() {
 
 	}
+
+	
+	
+	public DateVoyage(Date dateDepart, Date dateRetour, double prix) {
+		this.dateDepart = dateDepart;
+		this.dateRetour = dateRetour;
+		this.prix = prix;
+	}
+
+
 
 	public int getId() {
 		return id;

@@ -1,9 +1,15 @@
 package org.bovoyage.entities;
 
-public class DestinationTO {
+import java.io.Serializable;
+
+public class DestinationTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String region;
-	private String descritpion;
+	private String description;
 	private String image;
 
 	public DestinationTO() {
@@ -12,7 +18,7 @@ public class DestinationTO {
 	public DestinationTO(Destination destination){
 		this.id = destination.getId();
 		this.region = destination.getRegion();
-		this.descritpion = destination.getDescription();
+		this.description = destination.getDescription();
 //		this.image = destination.getImage();
 	}
 	
@@ -33,11 +39,11 @@ public class DestinationTO {
 	}
 
 	public String getDescription() {
-		return descritpion;
+		return description;
 	}
 
-	public void setDescription(String descritpion) {
-		this.descritpion = descritpion;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getImage() {

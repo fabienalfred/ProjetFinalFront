@@ -1,5 +1,6 @@
 package org.bovoyage.entities;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.CascadeType;
@@ -11,8 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Voyageur {
+public class Voyageur implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "kp_voyageur")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

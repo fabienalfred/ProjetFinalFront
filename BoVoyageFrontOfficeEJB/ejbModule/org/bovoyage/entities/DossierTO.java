@@ -1,6 +1,12 @@
 package org.bovoyage.entities;
 
-public class DossierTO {
+import java.io.Serializable;
+
+public class DossierTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int numReservation;
 	private Contact contact;
 	private DateVoyage dateVoyage;

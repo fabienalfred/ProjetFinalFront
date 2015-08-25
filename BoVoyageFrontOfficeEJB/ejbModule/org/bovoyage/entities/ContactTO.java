@@ -1,4 +1,6 @@
 package org.bovoyage.entities;
 
-public class ContactTO {
+import java.io.Serializable;
+
+public class ContactTO implements Serializable{
 }
