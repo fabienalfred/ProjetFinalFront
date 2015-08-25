@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+body, p, legend, label, input {
+	font: normal 8pt verdana, helvetica, sans-serif;
+}
+
+legend {
+	font-weight: bold;
+	color: #0568CD;
+}
+
+/* Forms --------------------------------------------------------------------------------------- */
+form label {
+	float: left;
+	width: 200px;
+	margin: 3px 0px 0px 0px;
+}
+
+form input {
+	margin: 3px 3px 0px 0px;
+	border: 1px #999 solid;
+}
+
+form input.sansLabel {
+	margin-left: 200px;
+}
+
+form .requis {
+	color: #c00;
+}
+
+fieldset {
+	background-color: #f0f0f0;
+	margin: auto;
+	padding: 10px;
+	/* 	padding: 0px; */
+	width: 40%;
+	border-radius: 5px;
+	opacity: 0.8;
+}
+
+legend {
+	background-color: #f0f0f0;
+	opacity: 0.8;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.mdl-textfield__label {
+	color: #585858;
+}
+
+#validate {
+	margin: auto;
+	border-radius: 5px;
+}
+
+#buttonField {
+	width: 4%;
+	padding: 0px;
+}
