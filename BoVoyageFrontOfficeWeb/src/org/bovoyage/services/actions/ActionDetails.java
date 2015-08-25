@@ -12,6 +12,7 @@ public class ActionDetails implements Action {
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao) {
 		String id = request.getParameter("idVoyage");
 		Destination dest = destDao.getDestinationById(Integer.parseInt(id));
+		// rajouter anti lazy
 		request.setAttribute("voyage", dest);
 		return "detail.jsp";
 	}

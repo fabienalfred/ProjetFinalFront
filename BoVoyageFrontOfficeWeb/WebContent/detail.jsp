@@ -37,6 +37,10 @@
 				</c:if>
 				<c:out value="${voyage.region}" />
 				<c:out value="${voyage.description}" />
+<%-- 				<c:forEach items="${voyage.dateVoyages}" var="date"> --%>
+<%-- 					<c:out value="${date.prix}" /> --%>
+<%-- 				</c:forEach> --%>
+				<c:out value="${voyage.description}" />
 				<jsp:include page="fragments/footer.jsp"></jsp:include>
 			</div>
 			</main>
