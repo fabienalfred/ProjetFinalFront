@@ -45,3 +45,51 @@ main{
 	background-repeat: no-repeat;
 /* 	position: fixed; */
 }
+
+#page {
+	width: 60%;
+	min-height: 750px;
+	margin: auto;
+	background-color: transparent;
+}
+
+.maxi-card {
+	width: 512px;
+	margin: auto;
+}
+
+.maxi-card > .mdl-card__title {
+	color: #fff;
+	height: 200px;
+}
+
+.maxi-card > .mdl-card__menu {
+	color: #fff;
+}
+
+.mini-cards {
+	width: 100%;
+	text-align: center;
+}
+
+.mini-card {
+	width: 350px;
+	display: inline-block;
+	text-align: left;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+.mini-card > .mdl-card__title {
+	color: #fff;
+	height: 150px;
+}
+
+.mini-card > .mdl-card__menu {
+	color: #fff;
+}
+
+
+
