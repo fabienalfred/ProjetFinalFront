@@ -9,8 +9,8 @@
 <body>
 	<form method="post" action="FrontController?cde=connexion">
 		<br />
-		<fieldset>
-			<legend>Identification :</legend>
+		<fieldset class="mdl-shadow--4dp">
+			<legend class="mdl-shadow--4dp">Identification :</legend>
 			<div
 				class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" name="email"
@@ -24,9 +24,9 @@
 			</div>
 		</fieldset>
 		<br />
-		<fieldset id="buttonField">
-			<input type="submit" id="validate"
-				class="mdl-button mdl-js-button mdl-button--primary" value="Valider" />
+		<fieldset id="buttonField" class="mdl-shadow--4dp">
+			<button type="submit" id="validate"
+				class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Valider</button>
 		</fieldset>
 	</form>
 </body>

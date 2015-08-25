@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="FrontController?cde=inscription">
+	<form id="formInscr" method="post" action="FrontController?cde=inscription">
 		<br />
 		<fieldset class="mdl-shadow--4dp">
-			<legend>Identification :</legend>
+			<legend class="mdl-shadow--4dp">Identification :</legend>
 			<div
 				class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" name="name"
@@ -37,7 +37,7 @@
 		</fieldset>
 		<br />
 		<fieldset class="mdl-shadow--4dp">
-			<legend>Adresse :</legend>
+			<legend class="mdl-shadow--4dp">Adresse :</legend>
 			<div
 				class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" name="street"
@@ -66,7 +66,7 @@
 		</fieldset>
 		<br />
 		<fieldset class="mdl-shadow--4dp">
-			<legend>Adresse de facturation :</legend>
+			<legend class="mdl-shadow--4dp">Adresse de facturation :</legend>
 			<div
 				class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" name="streetFact"
@@ -97,10 +97,11 @@
 			</div>
 		</fieldset>
 		<br />
-		<fieldset id="buttonField">
-			<input type="submit" id="validate"
-				class="mdl-button mdl-js-button mdl-button--primary" value="Valider" />
+		<fieldset id="buttonField" class="mdl-shadow--4dp">
+			<button type="submit" id="validate"
+				class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Valider</button>
 		</fieldset>
 	</form>
+	<br />
 </body>
 </html>

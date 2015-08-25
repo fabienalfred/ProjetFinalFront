@@ -25,10 +25,8 @@
 			<a class="mdl-navigation__link" href="FrontController?cde=compte">Compte</a>
 			</nav>
 			<div class="mdl-layout-spacer"></div>
-			<nav>
-				<jsp:include page="fragments/testpopupconnexion.jsp"></jsp:include>
-<!-- 				<a class="mdl-navigation__link" -->
-<!-- 				href="FrontController?cde=connexion">Connexion</a> -->
+			<nav> <a class="mdl-navigation__link"
+				href="FrontController?cde=connexion">Connexion</a>
 			</nav>
 		</div>
 		</header>
