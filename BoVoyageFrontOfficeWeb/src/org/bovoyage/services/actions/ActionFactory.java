@@ -25,6 +25,9 @@ public class ActionFactory {
 		case "commander":
 			action = new ActionHome();
 			break;
+		case "confirm":
+			action = new ActionConfirm();
+			break;
 		default:
 			action = new ActionHome();
 			break;

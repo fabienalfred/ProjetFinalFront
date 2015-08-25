@@ -40,7 +40,9 @@ public class DestinationDao {
 		List<Destination> dests = em.createNamedQuery("Destination.getAllDestination").getResultList();
 		List<DestinationTO> destinations = new ArrayList<>();
 		for (Destination d : dests) {
-			destinations.add(new DestinationTO(d));
+			DestinationTO dTO = new DestinationTO(d);
+			dTO.setImage(getImages(d).get(0));
+			destinations.add(dTO);
 		}
 		return destinations;
 	}
@@ -74,5 +76,9 @@ public class DestinationDao {
 		Destination destination = new Destination();
 		destination = getDestinationById(destinationTO.getId());
 		return destination;
+	}
+	
+	public DateVoyage getDateVoyageById(int id) {
+		return em.find(DateVoyage.class, id);
 	}
 }

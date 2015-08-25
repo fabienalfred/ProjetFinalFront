@@ -16,7 +16,8 @@ public class ActionDetails implements Action {
 		String id = request.getParameter("idVoyage");
 		Destination dest = destDao.getDestinationById(Integer.parseInt(id));
 		dest.setDateVoyages(destDao.getDateVoyage(dest));
-		request.setAttribute("voyage", dest);
+		dest.setImages(destDao.getImages(dest));
+		request.setAttribute("destination", dest);
 		//
 		// Code sale pour rajouter des dates voyage en base
 		//

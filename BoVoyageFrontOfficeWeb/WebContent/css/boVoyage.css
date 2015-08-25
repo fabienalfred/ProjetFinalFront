@@ -40,7 +40,7 @@ main {
 }
 
 .maxi-card {
-	width: 512px;
+	width: 500px;
 	margin: auto;
 }
 
@@ -65,7 +65,7 @@ main {
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 2.5%;
-	margin-bottom: 2.5%;
+	margin-bottom: 1.5%;
 }
 
 .mini-card>.mdl-card__title {
@@ -75,4 +75,32 @@ main {
 
 .mini-card>.mdl-card__menu {
 	color: #fff;
+}
+
+#divTableDetails {
+	width: 100%;
+}
+
+#tableDetails {
+	width: 550px;
+	margin: auto;
+}
+
+#tableDetails th {
+	text-align: left;
+}
+
+#tableDetails td {
+	text-align: left;
+}
+
+#tableDetails form {
+/* 	vertical-align: bottom%; */
+}
+
+#reserverButton {
+/* 	vertical-align: 50%; */
+/* 	display: block; */
+/* 	margin-top: auto; */
+/* 	margin-bottom: 5px;; */
 }
