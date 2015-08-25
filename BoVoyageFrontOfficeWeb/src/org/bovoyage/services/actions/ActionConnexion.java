@@ -5,10 +5,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.bovoyage.dao.DestinationDao;
 
-public class ActionCompte implements Action {
+public class ActionConnexion implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao) {
-		return "compte.jsp";
+		return "connexion.jsp";
 	}
 }

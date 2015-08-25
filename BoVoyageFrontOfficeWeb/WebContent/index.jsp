@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core_1_1" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,8 +25,11 @@
 			<a class="mdl-navigation__link" href="FrontController?cde=compte">Compte</a>
 			</nav>
 			<div class="mdl-layout-spacer"></div>
-			<nav> <a class="mdl-navigation__link"
-				href="FrontController?cde=connexion">Connexion</a> </nav>
+			<nav>
+				<jsp:include page="fragments/testpopupconnexion.jsp"></jsp:include>
+<!-- 				<a class="mdl-navigation__link" -->
+<!-- 				href="FrontController?cde=connexion">Connexion</a> -->
+			</nav>
 		</div>
 		</header>
 		<main class="mdl-layout__content">
@@ -33,7 +37,7 @@
 			<div id="page">
 				<jsp:include page="fragments/fichesAccueil.jsp"></jsp:include>
 			</div>
-				<jsp:include page="fragments/footer.jsp"></jsp:include>
+			<jsp:include page="fragments/footer.jsp"></jsp:include>
 		</div>
 		</main>
 	</div>

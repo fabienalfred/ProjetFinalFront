@@ -1,21 +1,28 @@
 @CHARSET "UTF-8";
 
+/* html, body { */
+/* 	height: 100%; */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* } */
 body, p, legend, label, input {
 	font: normal 8pt verdana, helvetica, sans-serif;
 }
 
 #page {
-	width: 60%;
-	min-height: 750px;
+	/* 		width: 1200px; */
+	height: 100%;
+	background-color: #c5c5c5;
 	margin: auto;
-	background-color: transparent;
 }
 
 #divWaterfall {
+	/* 	width: 1200px; */
 	
 }
 
 header {
+	/* 	width: 1200px; */
 	
 }
 
@@ -29,14 +36,22 @@ a {
 }
 
 main {
+	/* 	position: relative; */
 	
 }
 
 .page-content {
 	background-image: url("../ressources/seaside.jpg");
 	background-size: cover;
-/* 	background-attachement: fixed; */
 	background-repeat: no-repeat;
+	/* 	position: fixed; */
+}
+
+#page {
+	width: 60%;
+	min-height: 750px;
+	margin: auto;
+	background-color: transparent;
 }
 
 .maxi-card {

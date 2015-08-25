@@ -16,7 +16,15 @@ public class ActionFactory {
 		case "compte":
 			action = new ActionCompte();
 			break;
-
+		case "details":
+			action = new ActionDetails();
+			break;
+		case "connexion":
+			action = new ActionConnexion();
+			break;
+		case "commander":
+			action = new ActionHome();
+			break;
 		default:
 			action = new ActionHome();
 			break;
