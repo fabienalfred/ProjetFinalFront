@@ -22,6 +22,9 @@ public class ActionFactory {
 		case "connexion":
 			action = new ActionConnexion();
 			break;
+		case "commander":
+			action = new ActionHome();
+			break;
 		default:
 			action = new ActionHome();
 			break;

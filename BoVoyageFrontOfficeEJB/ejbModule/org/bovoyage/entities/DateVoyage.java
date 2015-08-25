@@ -17,10 +17,6 @@ import javax.persistence.OneToMany;
 @Entity
 public class DateVoyage implements Serializable{
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="kp_datevoyage")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
