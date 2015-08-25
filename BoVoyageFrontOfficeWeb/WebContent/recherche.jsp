@@ -35,10 +35,25 @@
 				<c:if test="${empty destinations}">
 					<c:out value="Aucun voyage disponible" />
 				</c:if>
-				<c:forEach items="${destinations}" var="dest">
-					<a href="FrontController?cde=details&idVoyage=${dest.id}"> <c:out
-							value="${dest.region}" /></a>
-				</c:forEach>
+				<div class="mini-cards">
+					<c:forEach items="${destinations }" var="dest" varStatus="i">
+						<div class="mini-card demo-card-wide mdl-card mdl-shadow--4dp">
+							<div class="mdl-card__title"
+								style="background: url('ressources/palmier.jpeg') center/cover;">
+								<h2 class="mdl-card__title-text">${dest.region }</h2>
+							</div>
+							<div class="mdl-card__actions mdl-card--border">
+								<a href="FrontController?cde=details&idVoyage=${dest.id}"
+										class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Détails </a>
+							</div>
+						</div>
+						<c:if test="${i.index % 2 != 0 }">
+				</div>
+				<div class="mini-cards">
+					</c:if>
+					</c:forEach>
+				</div>
 			</div>
 			<jsp:include page="fragments/footer.jsp"></jsp:include>
 		</div>

@@ -13,7 +13,7 @@
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/boVoyage.css">
 <link rel="stylesheet" href="css/formulaire.css">
-<title>Compte</title>
+<title>Connexion</title>
 </head>
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -33,7 +33,7 @@
 		<main class="mdl-layout__content">
 		<div class="page-content">
 			<div id="page">
-				<jsp:include page="fragments/formulaire.jsp"></jsp:include>
+				<jsp:include page="fragments/formulaireConnexion.jsp"></jsp:include>
 			</div>
 			<jsp:include page="fragments/footer.jsp"></jsp:include>
 		</div>
@@ -41,4 +41,3 @@
 	</div>
 </body>
 </html>
-
