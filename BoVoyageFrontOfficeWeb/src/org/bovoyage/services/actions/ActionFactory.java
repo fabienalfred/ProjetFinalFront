@@ -16,6 +16,9 @@ public class ActionFactory {
 		case "compte":
 			action = new ActionCompte();
 			break;
+		case "details":
+			action = new ActionDetails();
+			break;
 
 		default:
 			action = new ActionHome();

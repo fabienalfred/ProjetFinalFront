@@ -4,12 +4,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.bovoyage.dao.DestinationDao;
+import org.bovoyage.entities.Destination;
 
-public class ActionHome implements Action {
+public class ActionDetails implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao) {
-
-		return "index.jsp";
+		String id = request.getParameter("idVoyage");
+		Destination dest = destDao.getDestinationById(Integer.parseInt(id));
+		request.setAttribute("voyage", dest);
+		return "detail.jsp";
 	}
 }

@@ -12,8 +12,8 @@ public class DestinationTO {
 	public DestinationTO(Destination destination){
 		this.id = destination.getId();
 		this.region = destination.getRegion();
-		this.descritpion = destination.getDescritpion();
-		this.image = destination.getImage();
+		this.descritpion = destination.getDescription();
+//		this.image = destination.getImage();
 	}
 	
 	public int getId() {
@@ -32,11 +32,11 @@ public class DestinationTO {
 		this.region = region;
 	}
 
-	public String getDescritpion() {
+	public String getDescription() {
 		return descritpion;
 	}
 
-	public void setDescritpion(String descritpion) {
+	public void setDescription(String descritpion) {
 		this.descritpion = descritpion;
 	}
 

@@ -16,26 +16,24 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
-
 @Entity
 @NamedQueries({
-	@NamedQuery(name="Destination.getDestinationByRegion", query="FROM Destination d WHERE d.region LIKE :region"),
-	@NamedQuery(name="Destination.getAllDestination", query="SELECT d FROM Destination d")
-})
+		@NamedQuery(name = "Destination.getDestinationByRegion", query = "FROM Destination d WHERE d.region LIKE :region"),
+		@NamedQuery(name = "Destination.getAllDestination", query = "FROM Destination") })
 public class Destination {
-	
+
 	@Id
-	@Column(name="kp_destination")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "kp_destination")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String region;
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="ke_destination")
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "ke_destination")
 	private List<DateVoyage> dateVoyages = new ArrayList<>();
 	private String description;
 	@ElementCollection
-	@CollectionTable(name="images",joinColumns=@JoinColumn(name="ke_destination"))
-	@Column(name="image")
+	@CollectionTable(name = "images", joinColumns = @JoinColumn(name = "ke_destination") )
+	@Column(name = "image")
 	private List<String> images = new ArrayList<>();
 
 	public Destination() {
@@ -66,11 +64,11 @@ public class Destination {
 		this.dateVoyages = dateVoyages;
 	}
 
-	public String getDescritpion() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDescritpion(String descritpion) {
+	public void setDescription(String descritpion) {
 		this.description = descritpion;
 	}
 
@@ -81,9 +79,11 @@ public class Destination {
 	public void setImages(List<String> images) {
 		this.images = images;
 	}
-	
-	public String getImage(){
-		return images.get(0);
-	}
 
+	public String getImage() {
+		if (!images.isEmpty() || images != null)
+			return images.get(0);
+		else
+			return null;
+	}
 }

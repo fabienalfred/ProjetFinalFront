@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core_1_1" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,7 +32,13 @@
 			</header>
 			<main class="mdl-layout__content">
 			<div class="page-content">
-				<jsp:include page="fragments/test.jsp"></jsp:include>
+				<c:if test="${empty destinations}">
+					<c:out value="Aucun voyage disponible" />
+				</c:if>
+				<c:forEach items="${destinations}" var="dest">
+					<a href="FrontController?cde=details&idVoyage=${dest.id}"> <c:out
+							value="${dest.region}" /></a>
+				</c:forEach>
 				<jsp:include page="fragments/footer.jsp"></jsp:include>
 			</div>
 			</main>
