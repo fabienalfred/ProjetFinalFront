@@ -10,7 +10,7 @@
 	<form method="post" action="FrontController?cde=connexion">
 		<br />
 		<fieldset class="mdl-shadow--4dp">
-			<legend class="mdl-shadow--4dp">Identification :</legend>
+			<legend class="mdl-shadow--2dp">Identification :</legend>
 			<div
 				class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" name="email"

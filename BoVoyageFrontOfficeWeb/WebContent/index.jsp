@@ -12,6 +12,7 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/boVoyage.css">
+<link rel="stylesheet" href="css/formulaire.css">
 <title>BoVoyage</title>
 </head>
 <body>
