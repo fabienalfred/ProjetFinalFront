@@ -1,5 +1,6 @@
 package org.bovoyage.services.actions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +30,7 @@ public class ActionConfirmDate implements Action {
 		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		Compte compte =new Compte();
+		Compte compte = new Compte();
 		compte.setEmail(email);
 		compte.setPassword(password);
 		
@@ -45,7 +46,7 @@ public class ActionConfirmDate implements Action {
 		adresseDom.setVille(ville);
 		adresseDom.setPays(pays);
 		contact.setAdressePostale(adresseDom);
-		
+//		
 		Adresse adresseFact = new Adresse();
 		String rueFact = request.getParameter("streetFact");
 		String villeFact = request.getParameter("cityFact");
@@ -56,22 +57,38 @@ public class ActionConfirmDate implements Action {
 		adresseDom.setVille(villeFact);
 		adresseDom.setPays(paysFact);
 		contact.setAdressePostale(adresseFact);
-//		contactDao.create(contact);
-		
-		
-		
-		
 		
 		int nbVoyageurs = Integer.parseInt(request.getParameter("nbVoy"));
-//		int nbVoyageurs = req
-//		List<Voyageur> voyageurs = 
-//		request.setAttribute("dest", dest);
-//		request.setAttribute("date", date);
 		request.setAttribute("nbVoy", nbVoyageurs);
+		List<Voyageur> voyageurs = new ArrayList<>();
+		for(int i=1 ; i<=nbVoyageurs ; i++) {
+			Voyageur v = new Voyageur();
+			String nomV = request.getParameter("name"+i);
+			v.setNom(nomV);
+			String prenomV = request.getParameter("prenom"+i);
+			v.setPrenom(prenomV);
+			String dateN = request.getParameter("date"+i);
+//			v.setDateDeNaissance(dateN);
+			String emailV = request.getParameter("email"+i);
+			v.setEmail(emailV);
+			
+			Adresse adresseV = new Adresse();
+			String rueV = request.getParameter("street"+i);
+			adresseV.setRue(rueV);
+			String cpV = request.getParameter("postalCode"+i);
+			adresseV.setCodePostal(cpV);
+			String villeV = request.getParameter("city"+i);
+			adresseV.setVille(villeV);
+			String paysV = request.getParameter("country"+i);
+			adresseV.setPays(paysV);
+			
+			v.setAdresse(adresseV);
+			voyageurs.add(v);
+		}
 		
 		Dossier dossier = new Dossier();
 		dossier.setRegion(dest.getRegion());
-//		dossier.setVoyageurs(voyageurs);
+		dossier.setVoyageurs(voyageurs);
 		dossier.setDateVoyage(date);
 		dossier.setPrix(date.getPrix()*nbVoyageurs);
 		dossier.setContact(contact);
