@@ -50,10 +50,12 @@ public class DestinationDao {
 	@SuppressWarnings("unchecked")
 	public List<DestinationTO> getDestinationByRegion(String region) {
 		List<Destination> dests = em.createNamedQuery("Destination.getDestinationByRegion")
-				.setParameter("region", region).getResultList();
+				.setParameter("region", "%"+region+"%").getResultList();
 		List<DestinationTO> destinations = new ArrayList<>();
 		for (Destination d : dests) {
-			destinations.add(new DestinationTO(d));
+			DestinationTO dTO = new DestinationTO(d);
+			dTO.setImage(getImages(d).get(0));
+			destinations.add(dTO);
 		}
 		return destinations;
 	}

@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `Destination` (
   `region` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL,
   PRIMARY KEY(`kp_destination`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6;
 
 --
 -- Contenu de la table `destinations`

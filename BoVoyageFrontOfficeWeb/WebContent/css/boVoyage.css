@@ -6,7 +6,7 @@ body, p, legend, label, input {
 
 #page {
 	width: 60%;
-	min-height: 750px;
+	min-height: 756px;
 	margin: auto;
 	background-color: transparent;
 }
@@ -33,10 +33,9 @@ main {
 }
 
 .page-content {
-	background-image: url("../ressources/seaside.jpg");
+	background: url("../ressources/seaside.jpg") fixed no-repeat;
 	background-size: cover;
-/* 	background-attachement: fixed; */
-	background-repeat: no-repeat;
+	/* 	background-attachement: fixed; */
 }
 
 .maxi-card {
@@ -90,17 +89,16 @@ main {
 	text-align: left;
 }
 
-#tableDetails td {
-	text-align: left;
-}
-
-#tableDetails form {
-/* 	vertical-align: bottom%; */
-}
-
 #reserverButton {
-/* 	vertical-align: 50%; */
-/* 	display: block; */
-/* 	margin-top: auto; */
-/* 	margin-bottom: 5px;; */
+	/* 	vertical-align: 50%; */
+	/* 	display: block; */
+	/* 	margin-top: auto; */
+	/* 	margin-bottom: 5px;; */
+	
+}
+
+#tableDetails td {
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
 }

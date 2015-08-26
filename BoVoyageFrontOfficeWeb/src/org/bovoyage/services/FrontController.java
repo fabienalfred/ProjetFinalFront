@@ -1,7 +1,6 @@
 package org.bovoyage.services;
 
 import java.io.IOException;
-
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,6 +33,7 @@ public class FrontController extends HttpServlet {
 		page = action.execute(request, response, destDao);
 
 		RequestDispatcher rd = request.getRequestDispatcher(page);
+//		response.setCharacterEncoding("UTF-8");
 		rd.forward(request, response);
 	}
 

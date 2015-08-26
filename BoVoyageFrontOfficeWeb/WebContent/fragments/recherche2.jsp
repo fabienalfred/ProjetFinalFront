@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core_1_1" prefix="c"%>
 
+<jsp:include page="formulaireRecherche.jsp"></jsp:include>
 
 <c:if test="${empty destinations}">
 	<c:out value="Aucun voyage disponible" />
@@ -25,3 +26,4 @@
 	</c:if>
 	</c:forEach>
 </div>
+
