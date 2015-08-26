@@ -25,8 +25,11 @@ public class ActionFactory {
 		case "commander":
 			action = new ActionHome();
 			break;
-		case "confirm":
-			action = new ActionConfirm();
+		case "selectDate":
+			action = new ActionSelectDate();
+			break;
+		case "confirmDate":
+			action = new ActionConfirmDate();
 			break;
 		default:
 			action = new ActionHome();

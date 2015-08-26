@@ -15,6 +15,8 @@
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/boVoyage.css">
 <link rel="stylesheet" href="css/formulaire.css">
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/changeNbVoyageurs.js"></script>
 <title>BoVoyage</title>
 </head>
 <body>

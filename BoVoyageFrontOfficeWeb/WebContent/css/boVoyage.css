@@ -89,6 +89,7 @@ main {
 	text-align: left;
 }
 
+<<<<<<< HEAD
 #reserverButton {
 	/* 	vertical-align: 50%; */
 	/* 	display: block; */
@@ -102,3 +103,8 @@ main {
 	vertical-align: middle;
 	text-align: center;
 }
+=======
+#tableDetails td {
+	text-align: left;
+}
+>>>>>>> refs/heads/fabien
