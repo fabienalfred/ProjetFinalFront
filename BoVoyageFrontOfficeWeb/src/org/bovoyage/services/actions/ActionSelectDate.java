@@ -20,6 +20,13 @@ public class ActionSelectDate implements Action {
 		DateVoyage datevoyage = destDao.getDateVoyageById(Integer.parseInt(request.getParameter("idDate")));
 		request.setAttribute("dest", dest);
 		request.setAttribute("date", datevoyage);
+		if(request.getParameter("nbVoy") == null || request.getParameter("nbVoy").isEmpty())
+			request.setAttribute("nbVoy", 1);
+		else {
+			int nbVoyageurs = Integer.parseInt(request.getParameter("nbVoy"));
+			request.setAttribute("nbVoy", nbVoyageurs);
+		}
+//		System.out.println("nbVoy"));
 		request.setAttribute("fragment", "reservationsDetails");
 		return "index.jsp";
 	}

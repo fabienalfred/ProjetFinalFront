@@ -60,3 +60,16 @@ legend {
 	width: 4%;
 	padding: 0px;
 }
+
+#divFormContact, #divFormVoyageur {
+	text-align: center;
+}
+
+#divFormContact > fieldset {
+	display: inline-block;
+	width: 30%;
+}
+
+#divFormVoyageur > fieldset {
+	display: inline-block;
+}

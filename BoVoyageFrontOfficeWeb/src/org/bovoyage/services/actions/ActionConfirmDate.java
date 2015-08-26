@@ -18,11 +18,12 @@ public class ActionConfirmDate implements Action {
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao, DossierDao dossierDao) {
 		Destination dest = destDao.getDestinationById(Integer.parseInt(request.getParameter("idDest")));
 		DateVoyage date = destDao.getDateVoyageById(Integer.parseInt(request.getParameter("idDate")));
-		int nbVoyageurs = Integer.parseInt(request.getParameter("nbVoyageurs"));
+		int nbVoyageurs = Integer.parseInt(request.getParameter("nbVoy"));
+//		int nbVoyageurs = req
 //		List<Voyageur> voyageurs = 
 //		request.setAttribute("dest", dest);
 //		request.setAttribute("date", date);
-//		request.setAttribute("nbVoyageurs", nbVoyageurs);
+		request.setAttribute("nbVoy", nbVoyageurs);
 		
 		Dossier dossier = new Dossier();
 		dossier.setRegion(dest.getRegion());

@@ -28,7 +28,7 @@
 							dateStyle="long" /></td>
 					<td><fmt:formatDate value="${dossier.dateVoyage.dateRetour }" type="date"
 							dateStyle="long" /></td>
-					<td><c:out value="${nbVoyageurs }" /></td>
+					<td><c:out value="${nbVoy }" /></td>
 					<td><fmt:formatNumber value="${dossier.prix }" type="currency" /></td>
 				</tr>
 		</tbody>
