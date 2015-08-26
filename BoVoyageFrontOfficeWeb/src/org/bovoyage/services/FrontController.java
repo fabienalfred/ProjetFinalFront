@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.bovoyage.dao.DestinationDao;
+import org.bovoyage.dao.DossierDao;
 import org.bovoyage.services.actions.Action;
 import org.bovoyage.services.actions.ActionFactory;
 
@@ -22,7 +23,9 @@ public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@EJB
 	private DestinationDao destDao;
-
+	@EJB
+	private DossierDao dossierDao;
+	
 	public FrontController() {
 	}
 
@@ -31,7 +34,7 @@ public class FrontController extends HttpServlet {
 		String cde = request.getParameter("cde");
 		String page = "index.jsp";
 		Action action = ActionFactory.getAction(cde);
-		page = action.execute(request, response, destDao);
+		page = action.execute(request, response, destDao, dossierDao);
 
 		RequestDispatcher rd = request.getRequestDispatcher(page);
 		rd.forward(request, response);
@@ -41,4 +44,5 @@ public class FrontController extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
+	
 }

@@ -39,7 +39,7 @@
 					<td><fmt:formatNumber value="${date.prix }" type="currency" /></td>
 					<td>
 						<form method="post"
-							action="FrontController?cde=confirm&idDest=${destination.id }&idDate=${date.id }">
+							action="FrontController?cde=selectDate&idDest=${destination.id }&idDate=${date.id }">
 							<button type="submit" id="reserverButton"
 								class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Réserver</button>
 						</form>

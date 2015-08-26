@@ -93,14 +93,3 @@ main {
 #tableDetails td {
 	text-align: left;
 }
-
-#tableDetails form {
-/* 	vertical-align: bottom%; */
-}
-
-#reserverButton {
-/* 	vertical-align: 50%; */
-/* 	display: block; */
-/* 	margin-top: auto; */
-/* 	margin-bottom: 5px;; */
-}
