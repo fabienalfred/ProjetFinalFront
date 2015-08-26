@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `images` (
 -- Contenu de la table `images`
 --
 
-INSERT INTO `images` (`image`, `ke_destination`) VALUES
+INSERT INTO `images` (`ke_destination`, `image`) VALUES
 (1, 'palmier.jpeg'),
 (2, 'saint-barth_1.jpg'),
 (2, 'saint-barth_2.jpg'),

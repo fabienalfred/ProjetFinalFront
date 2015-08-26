@@ -19,7 +19,8 @@ public class ActionConfirm implements Action {
 		DateVoyage datevoyage = destDao.getDateVoyageById(Integer.parseInt(request.getParameter("idDate")));
 		request.setAttribute("dest", dest);
 		request.setAttribute("date", datevoyage);
-		return "reservations.jsp";
+		request.setAttribute("fragment", "reservationsDetails");
+		return "index.jsp";
 	}
 
 }

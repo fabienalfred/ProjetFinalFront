@@ -33,62 +33,7 @@
 		<main class="mdl-layout__content">
 		<div class="page-content">
 			<div id="page">
-				<c:if test="${empty destination}">
-					<c:out value="Voyage indisponible" />
-				</c:if>
-				<br/ >
-				<div class="maxi-card demo-card-wide mdl-card mdl-shadow--2dp">
-					<div class="mdl-card__title"
-						style="background: url('ressources/${destination.images[0]}') center/cover;">
-						<h2 class="mdl-card__title-text">${destination.region }</h2>
-					</div>
-					<%-- 					<div class="mdl-card__supporting-text">${voyage.description }</div> --%>
-					<%-- 					<c:forEach items="${destination.dateVoyages}" var="date"> --%>
-					<!-- 						<div class="mdl-card__supporting-text"> -->
-
-					<%-- 							<fmt:formatNumber value="${date.prix }" type="currency" /> --%>
-					<!-- 						</div> -->
-					<%-- 					</c:forEach> --%>
-					<!-- 					<div class="mdl-card__actions mdl-card--border"> -->
-					<%-- 						<a href="FrontController?cde=commander&idVoyage=${voyage.id}" --%>
-					<!-- 							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> -->
-					<!-- 							Commander </a> -->
-					<!-- 					</div> -->
-				</div>
-
-				<br />
-				<div id="divTableDetails">
-					<table id="tableDetails"
-						class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-						<thead>
-							<tr>
-								<th>Date de départ</th>
-								<th>Date de retour</th>
-								<th>Prix</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<fmt:setLocale value="fr_FR" />
-							<c:forEach items="${destination.dateVoyages}" var="date">
-								<tr>
-									<td><fmt:formatDate value="${date.dateDepart }"
-											type="date" dateStyle="long" /></td>
-									<td><fmt:formatDate value="${date.dateRetour }"
-											type="date" dateStyle="long" /></td>
-									<td><fmt:formatNumber value="${date.prix }"
-											type="currency" /></td>
-									<td>
-										<form method="post" action="FrontController?cde=confirm&idDest=${destination.id }&idDate=${date.id }">
-											<button type="submit" id="reserverButton"
-												class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Réserver</button>
-										</form>
-									</td>
-								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
-				</div>
+				<jsp:include page="fragments/detailsDate.jsp"></jsp:include>
 			</div>
 			<jsp:include page="fragments/footer.jsp"></jsp:include>
 		</div>

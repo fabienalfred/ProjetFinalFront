@@ -18,14 +18,7 @@ public class ActionDetails implements Action {
 		dest.setDateVoyages(destDao.getDateVoyage(dest));
 		dest.setImages(destDao.getImages(dest));
 		request.setAttribute("destination", dest);
-		//
-		// Code sale pour rajouter des dates voyage en base
-		//
-		// DateVoyage dateVoyage = new DateVoyage(new Date(1000, 10, 01),new
-		// Date(1001, 04, 10), new Double(1020.0));
-		// dest.addDateVoyage(dateVoyage);
-		// destDao.update(dest);
-		//
-		return "detail.jsp";
+		request.setAttribute("fragment", "detailsDate");
+		return "index.jsp";
 	}
 }

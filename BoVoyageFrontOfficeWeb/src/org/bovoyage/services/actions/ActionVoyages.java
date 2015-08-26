@@ -16,7 +16,7 @@ public class ActionVoyages implements Action {
 		List<DestinationTO> destinations;
 		destinations = destDao.getAllDestination();
 		request.setAttribute("destinations", destinations);
-//		System.out.println(destinations.size());
-		return "recherche.jsp";
+		request.setAttribute("fragment", "recherche2");
+		return "index.jsp";
 	}
 }

@@ -9,6 +9,7 @@ public class ActionConnexion implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao) {
-		return "connexion.jsp";
+		request.setAttribute("fragment", "formulaireConnexion");
+		return "index.jsp";
 	}
 }

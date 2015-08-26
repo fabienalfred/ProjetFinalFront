@@ -16,6 +16,7 @@ public class ActionHome implements Action {
 		
 		List<DestinationTO> destinations = destDao.getAllDestination();
 		request.setAttribute("destinations", destinations);
+		request.setAttribute("fragment", "fichesAccueil");
 		return "index.jsp";
 	}
 }

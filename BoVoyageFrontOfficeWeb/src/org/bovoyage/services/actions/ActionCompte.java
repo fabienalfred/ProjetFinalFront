@@ -9,6 +9,7 @@ public class ActionCompte implements Action {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao) {
-		return "compte.jsp";
+		request.setAttribute("fragment", "formulaire");
+		return "index.jsp";
 	}
 }

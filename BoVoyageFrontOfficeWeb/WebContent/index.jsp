@@ -33,7 +33,7 @@
 		<main class="mdl-layout__content">
 		<div class="page-content">
 			<div id="page">
-				<jsp:include page="fragments/fichesAccueil.jsp"></jsp:include>
+				<jsp:include page="fragments/${fragment }.jsp"></jsp:include>
 			</div>
 			<jsp:include page="fragments/footer.jsp"></jsp:include>
 		</div>
