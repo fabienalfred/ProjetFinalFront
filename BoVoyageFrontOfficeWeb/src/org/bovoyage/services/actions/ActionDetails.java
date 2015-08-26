@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.bovoyage.dao.ContactDao;
 import org.bovoyage.dao.DestinationDao;
 import org.bovoyage.dao.DossierDao;
 import org.bovoyage.entities.DateVoyage;
@@ -13,7 +14,7 @@ import org.bovoyage.entities.Destination;
 public class ActionDetails implements Action {
 
 	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao, DossierDao dossierDao) {
+	public String execute(HttpServletRequest request, HttpServletResponse response, DestinationDao destDao, DossierDao dossierDao, ContactDao contactDao) {
 		String id = request.getParameter("idVoyage");
 		Destination dest = destDao.getDestinationById(Integer.parseInt(id));
 		dest.setDateVoyages(destDao.getDateVoyage(dest));

@@ -39,7 +39,7 @@ public class Dossier implements Serializable{
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="ke_dossier")
 	private List<Voyageur> voyageurs = new ArrayList<>();
-//	private Contact contact;
+	private Contact contact;
 	private double prix;
 
 
@@ -79,13 +79,13 @@ public class Dossier implements Serializable{
 		this.voyageurs = voyageurs;
 	}
 
-//	public Contact getContact() {
-//		return contact;
-//	}
-//
-//	public void setContact(Contact contact) {
-//		this.contact = contact;
-//	}
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
 
 	public double getPrix() {
 		return this.prix;
