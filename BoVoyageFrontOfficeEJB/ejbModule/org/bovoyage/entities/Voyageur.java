@@ -14,9 +14,6 @@ import javax.persistence.OneToOne;
 @Entity
 public class Voyageur implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name = "kp_voyageur")

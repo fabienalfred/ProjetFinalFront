@@ -8,24 +8,24 @@ import org.bovoyage.entities.Contact;
 
 @Singleton
 public class ContactDao {
-	
-	@PersistenceContext(unitName="dbbovoyage") private EntityManager em;
-	
-	public void create(Contact contact){
+
+	@PersistenceContext(unitName = "dbbovoyage")
+	private EntityManager em;
+
+	public void create(Contact contact) {
 		em.persist(contact);
 	}
-	
-	public void delete(int id){
+
+	public void delete(int id) {
 		Contact contact = em.find(Contact.class, id);
 		em.remove(contact);
 	}
-	
-	public void update(Contact contact){
+
+	public void update(Contact contact) {
 		em.merge(contact);
 	}
-	
-	public Contact getContactById(int id){
+
+	public Contact getContactById(int id) {
 		return em.find(Contact.class, id);
 	}
-	
 }
