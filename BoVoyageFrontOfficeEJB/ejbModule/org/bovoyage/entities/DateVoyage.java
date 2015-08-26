@@ -25,7 +25,6 @@ public class DateVoyage implements Serializable{
 	private Date dateRetour;
 	private double prix;
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="dateVoyage")
-//	@JoinColumn(name="ke_datevoyage")
 	private List<Dossier> dossiers = new ArrayList<>();
 
 	public DateVoyage() {

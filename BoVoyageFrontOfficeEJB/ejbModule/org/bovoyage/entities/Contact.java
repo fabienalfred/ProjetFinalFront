@@ -34,8 +34,7 @@ public class Contact implements Serializable{
 	private Adresse adresseFacturation;
 	@OneToOne(cascade=CascadeType.ALL)
 	private Compte compte;
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="ke_contact")
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="contact")
 	private List<Dossier> dossiers = new ArrayList<>();
 	
 	public List<Dossier> getDossiers() {

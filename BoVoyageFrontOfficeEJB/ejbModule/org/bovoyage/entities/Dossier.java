@@ -39,6 +39,8 @@ public class Dossier implements Serializable{
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="ke_dossier")
 	private List<Voyageur> voyageurs = new ArrayList<>();
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="ke_contact")
 	private Contact contact;
 	private double prix;
 
